@@ -7,7 +7,7 @@ description: "Personal website of front-end developer David Dias."
 locale: "en_US"
 noindex: false
 
-repository: "daviddiasfront/daviddiasfront.github.io"
+repository: "daviddiasdigital/daviddiasdigital.github.io"
 url: "https://www.david-dias.com"
 
 # Site owner
@@ -15,18 +15,18 @@ owner:
   name: "David Dias"
   bio: ""
   avatar: "/avatar/david-dias.jpg"
-  email: "daviddiasfront@gmail.com"
+  email: "daviddiasdigital@gmail.com"
   social:
     img: ""
     twitter_username: "daviddiasfront"
-    facebook_username: "daviddiasfront"
+    facebook_username: "daviddiasdigital"
     instagram_username: "daviddiasfront"
-    github_username: "daviddiasfront"
+    github_username: "daviddiasdigital"
     codepen_username: "daviddiasfront"
     500px_username: "daviddiasfront"
     foursquare_username: "daviddiasfront"
-    github_repo: "https://github.com/daviddiasfront/daviddiasfront.github.io/"
-    github_master: "https://github.com/daviddiasfront/daviddiasfront.github.io/blob/master/"
+    github_repo: "https://github.com/daviddiasdigital/daviddiasdigital.github.io/"
+    github_master: "https://github.com/daviddiasdigital/daviddiasdigital.github.io/blob/master/"
   google:
     provider: "google-universal"
     analytics: "UA-45667748-1"
