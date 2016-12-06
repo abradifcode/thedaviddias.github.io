@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+      
+        Debug injecting your CSS and JavaScript files in production with Browser-Sync &middot; David Dias
+      
+    
+  </title>
+  <meta name="description" content="Developers face everyday the need to debug something that is on staging or in production and need to test on these environments before to ask a backend to up...">
+
+  <link type="text/css" rel="stylesheet" href="/assets/main-d5362532dc4e6a1903fe992a3748d1af8a6dc962639934fca9d9b0e20c694709.css">
+
+  <link rel="canonical" href="/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/">
+
+  <link rel="alternate" type="application/rss+xml" title="David Dias" href="/feed.xml">
+  
+  <link href="https://www.instagram.com/daviddiasfront/" rel="me">
+  <link href="https://github.com/daviddiasfront/" rel="me">
+
+  
+    <meta name="msvalidate.01" content="84B7F071DD4BC580F678B80A9D62EED1" />
+  
+
+  
+
+    <!-- And also favicons -->
+  <link rel="shortcut icon" href="img/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- webmention and pingback -->
+<link rel="pingback" href="https://webmention.io/david-dias.com/xmlrpc">
+<link rel="webmention" href="https://webmention.io/david-dias.com/webmention">
+
+    <!-- Social: Twitter -->
+  <link href="https://twitter.com/daviddiasfront" rel="me">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="David Dias">
+  <meta name="twitter:title" content="Debug injecting your CSS and JavaScript files in production with Browser-Sync">
+  
+    <meta name="twitter:description" property="og:description" content="Developers face everyday the need to debug something that is on staging or in production and need to test on these environments before to...">
+  
+  <meta name="twitter:image:src" content="https://www.david-dias.com">
+
+
+    <!-- Social: Facebook / Open Graph -->
+  <link href="https://www.facebook.com/daviddiasdigital" rel="me">
+  <meta property="og:title" content="Debug injecting your CSS and JavaScript files in production with Browser-Sync" /> 
+  <meta property="og:site_name" content="David Dias" /> 
+  <meta property="og:type" content="website" /> 
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="https://www.david-dias.com" />
+  <meta property="og:description" content="Developers face everyday the need to debug something that is on staging or in production and need to test on these environments before to ask a backend to update their CSS or JavaScript files on th..." /> 								
+
+
+  
+</head>
+<!--(¯`·.¸¸.-> °º ℓσσк му ¢σ∂є αи∂ gινє мє fєє∂вα¢кѕ σи gιтнυв! º° <-.¸¸.·´¯)-->
+
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <meta itemprop="publisher" content="David Dias"/>
+    <meta itemprop="accessibilityControl" content="fullKeyboardControl"/>
+    <meta itemprop="accessibilityFeature" content="alternativeText">
+    <meta itemprop="accessibilityControl" content="fullMouseControl">
+    <meta itemprop="inLanguage" content="en"/>
+
+    <div class="skip">
+      <a href="#content">[Skip to Main Content]</a>
+    </div>
+    <!--[if lte IE 9]><div class="notice--danger center"><strong>Your browser is quite old!</strong><p>Why not <a href="http://whatbrowser.org/">upgrade to a more modern one</a> to better enjoy this site?</p></div><![endif]-->
+
+    <header class="header" role="banner">
+  <div class="container">
+    <div class="header__navbar">
+      <a class="header__logo" href="/" rel="home">
+        <span class="header__title">David Dias</span>
+        
+          <span class="header__subtitle">Front-End <span>User Experience</span> Developer</span>
+        
+      </a>
+      <nav class="header__nav" role="navigation" aria-label="Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <!--<a href="#" class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+            <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+            <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+          </svg>
+        </a>-->
+        <ul class="header__list">
+        
+          
+          <li class="header__list__item">
+            <a class="header__list__link" href="/notes/">Notes</a>
+          </li>
+          
+        
+          
+          <li class="header__list__item">
+            <a class="header__list__link" href="/david-dias-story/">My story</a>
+          </li>
+          
+        
+          
+          <li class="header__list__item">
+            <a class="header__list__link" href="/contact-david-dias/">Contact me</a>
+          </li>
+          
+        
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <main id="content" class="main" aria-label="Main content" itemscope itemtype="http://schema.org/Blog">
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <meta itemprop="description" content="Developers face everyday the need to debug something that is on staging or in production and need to test on these environments before to ask a backend to update their CSS or JavaScript files on the server.
+
+">
+
+  <header class="post__header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 center-lg">
+          <div class="post__wrapper">
+            <p class="post__category">
+              <a href="/category/front-end/">front-end</a>
+            </p>
+            <h1 class="post__title" itemprop="name headline">Debug injecting your CSS and JavaScript files in production with Browser-Sync
+</h1>
+            <div class="post__meta">
+              
+                <time datetime="2016-09-07T21:11:20+04:00" itemprop="datePublished">Sep 7, 2016</time>
+              
+              
+
+              <section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <picture class="author__image">
+
+                </picture>
+                <p class="author__name">Posted by <span itemprop="name">David Dias</span></p>
+              </section>
+
+
+              
+                <div class="read-time">
+
+
+  less than 1 min
+ read
+</div>
+
+              
+              
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </header>
+
+  <section class="post__content" itemprop="articleBody">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+        
+  
+  <nav class="breadcrumb" aria-label="breadcrumbs" role="navigation">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb__item">
+      <a href="https://www.david-dias.com" itemprop="url" aria-level="1">
+        <span itemprop="title">Home</span>
+      </a>
+    </span>
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb__item">
+      <a href="https://www.david-dias.com/notes/" itemprop="url" aria-level="2">
+        <span itemprop="title">Notes</span>
+      </a>
+    </span>
+  </nav>
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <p>Developers face everyday the need to debug something that is on staging or in production and need to test on these environments before to ask a backend to update their CSS or JavaScript files on the server.</p>
+
+<!--more-->
+
+<h2 id="that-is-a-good-story">That is a good story</h2>
+
+<p>This is a place where.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"HolyGrail"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header&gt;</span>…<span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"HolyGrail-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"HolyGrail-content"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/main&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"HolyGrail-nav"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"HolyGrail-ads"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/aside&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>…<span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="post__footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+        
+          <div class="post__taxonomy">
+            
+
+
+
+
+  <div class="post__taxonomy">
+    Tags: <span class="post__taxonomy-wrapper" itemprop="keywords">
+    
+      
+      
+        
+          <a href="/tag/browsersync/" class="post__taxonomy-item" rel="tag">browsersync</a>
+        , 
+    
+      
+      
+        
+          <a href="/tag/front-end/" class="post__taxonomy-item" rel="tag">front-end</a>
+        , 
+    
+      
+      
+         and
+          <a href="/tag/web-developement/" class="post__taxonomy-item" rel="tag">web developement</a>
+        
+    
+    </span>
+  </div>
+
+
+          </div>
+        
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          
+<div class="share">
+  <h2 class="share__heading">Share this note</h2>
+  <ul class="share__list">
+    <li class="share__item">
+      <a href="https://twitter.com/intent/tweet?text=Debug injecting your CSS and JavaScript files in production with Browser-Sync&url=https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    </li>
+    <li class="share__item">
+      <a href="https://facebook.com/sharer.php?u=https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/" rel="nofollow" target="_blank" title="Share on Facebook">
+        <span class="icon facebook"></span>
+      </a>
+    </li>
+    <li class="share__item">
+      <a href="https://plus.google.com/share?url=https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    </li>
+    <li class="share__item">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/&title=Debug injecting your CSS and JavaScript files in production with Browser-Sync&summary=&source=https://www.david-dias.com" rel="nofollow" target="_blank" title="Share on LinkedIn">LinkedIn</a>
+    </li>
+    <li class="share__item">
+      <a href="http://www.reddit.com/submit?url=https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/&title=Debug injecting your CSS and JavaScript files in production with Browser-Sync" rel="nofollow" target="_blank" title="Share on Reddit">Reddit</a>
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <aside class="post__navigation">
+
+  
+    <div class="post__navigation__prev">
+      <span>←</span>
+      <a class="prev" href="/notes/the-real-status-of-web-developers-skills-in-mauritius/">&laquo; The real status of web developer’s skills in Mauritius</a>
+    </div>
+  
+  
+    <div class="post__navigation__next">
+      <span>→</span>
+      <a class="next" href="/experiments/experiment/">Experiment 01</a>
+    </div>
+  
+    
+</aside>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+</article>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="footer__media__list">
+            
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <li>
+    <a href="/feed.xml" aria-label="Keep you updated with the RSS feed">
+      <span class="icon rss" aria-hidden="true"></span>
+    </a>
+  </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 center-lg">
+            <p>David Dias 2016 - Made with ♥ and <a href="">coffee</a> using proudly <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</p>
+            
+              <p><a href="_posts/notes/2016-09-07-debug-injecting-css-and-javascript-files-in-production-with-browser-sync.md" target="_blank">View source</a></p>
+            
+            <p><small>Living now in Mauritius. (before France, Brazil)</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script type="text/javascript">
+  
+  
+</script>
+
+
+
+
+  </body>
+
+</html>

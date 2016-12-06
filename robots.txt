@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.david-dias.com/feed.xml

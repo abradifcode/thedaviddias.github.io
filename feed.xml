@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>David Dias</title>
+    <description>Personal website of front-end developer David Dias.</description>
+    <link>https://www.david-dias.com/</link>
+    <atom:link href="https://www.david-dias.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 06 Dec 2016 08:49:15 +0400</pubDate>
+    <lastBuildDate>Tue, 06 Dec 2016 08:49:15 +0400</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Welcome Aboard</title>
+        <description>
+</description>
+        <pubDate>Fri, 23 Sep 2016 14:52:51 +0400</pubDate>
+        <link>https://www.david-dias.com/notes/welcome-aboard/</link>
+        <guid isPermaLink="true">https://www.david-dias.com/notes/welcome-aboard/</guid>
+        
+        
+        <category>thought</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Blockquotes are very handy in email to emulate reply text.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 12 Sep 2016 21:11:20 +0400</pubDate>
+        <link>https://www.david-dias.com/notes/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">https://www.david-dias.com/notes/welcome-to-jekyll/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Experiment 01</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 12 Sep 2016 21:11:20 +0400</pubDate>
+        <link>https://www.david-dias.com/experiments/experiment/</link>
+        <guid isPermaLink="true">https://www.david-dias.com/experiments/experiment/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+        
+        <category>experiment</category>
+        
+      </item>
+    
+      <item>
+        <title>Debug injecting your CSS and JavaScript files in production with Browser-Sync</title>
+        <description>&lt;p&gt;Developers face everyday the need to debug something that is on staging or in production and need to test on these environments before to ask a backend to update their CSS or JavaScript files on the server.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;that-is-a-good-story&quot;&gt;That is a good story&lt;/h2&gt;
+
+&lt;p&gt;This is a place where.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HolyGrail&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;header&amp;gt;&lt;/span&gt;…&lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HolyGrail-body&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;main&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HolyGrail-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;…&lt;span class=&quot;nt&quot;&gt;&amp;lt;/main&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HolyGrail-nav&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;…&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;aside&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HolyGrail-ads&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;…&lt;span class=&quot;nt&quot;&gt;&amp;lt;/aside&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&amp;gt;&lt;/span&gt;…&lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 07 Sep 2016 21:11:20 +0400</pubDate>
+        <link>https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/</link>
+        <guid isPermaLink="true">https://www.david-dias.com/notes/debug-injecting-css-and-javascript-files-in-production-with-browser-sync/</guid>
+        
+        <category>front-end</category>
+        
+        <category>web developement</category>
+        
+        <category>browsersync</category>
+        
+        
+        <category>front-end</category>
+        
+      </item>
+    
+      <item>
+        <title>The real status of web developer’s skills in Mauritius</title>
+        <description>&lt;p&gt;When I arrived in Mauritius in October 2015, I was already working with lot of Mauritians since these 3 last years. I helped Front-Ends developers to push them forward, not be afraid to use new technologies to respond to technical challenges. And today I’m really proud of the team I’m managing. But after few months living here, my vision is uncompromising: futur developers need to change the way they work and learn else the market will fall down soon.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;an-education-system-that-needs-to-be-reinvented&quot;&gt;An education system that needs to be reinvented&lt;/h2&gt;
+
+&lt;p&gt;Living on a small island is far to be easy. In the middle of the Indian Ocean, much more. But, I want to believe that problems and difficulties don’t exist without solutions and benefits… people always figure out… when they really want.
+Since these last months, I did lot of interviews, most of the people were coming from Mauritian Universities where they are taught the “web development”. Web… in fact not the web that you and I know and not the web that is asked around the world by all big clients who want to launch their lastest big projects on Internet. Unfortunately, I noticed that the level of knowledge of Front-End development reflects that of 5-10 years before.
+Like I used to say until now in all the interviews I did:
+It seems it exists a Mauritian world wide web and a world wide web…
+Most of the people smiled hearing that, but it seems to be unfortunately the case. When I’m talking about SASS (existing at least since 2006), Node.js (2009), APIs, Angular.js (and other awesome stuffs :)), even a student need to be aware at least about these technologies if he wants to be a Front-End developer (and I’m not talking about UX, Web design, Architecture that every Front-End needs to know too).
+You can think that it’s easy to blame the “system”, but it’s not only about the “system”. The system don’t really care if Mauritian students are happy with their job or their student’s experience, and it’s seems that Universities don’t too (except maybe one I have in mind). Why do you think a big portion of Mauritians go to study in England or outside their Island?
+It’s not only about skills, it’s about a web culture
+Most of the time, when I meet people for interviews, they seem to be really far to have a “web culture” so I don’t hesitate to give them lot of tips to acquire that “web culture”. Because it’s not only about having or not having such skills, it’s about to have a “web culture”.&lt;/p&gt;
+
+&lt;h2 id=&quot;mauritian-students-has-missed-a-web-culture&quot;&gt;Mauritian students has missed a “web culture”.&lt;/h2&gt;
+
+&lt;p&gt;What means having a “web culture”? It’s the capacity to be aware about all changes that appear in our virtual and real world. Everyone that wants to work with Internet needs to know what is a RSS feed, what is a server, have an account on Github (if you don’t have, go now and create one!), understand how Twitter works, how APIs are changing the actual face of the web, and on top of all, practising every day, every week, reading ebooks, articles and watching video tutorials.
+Be a developer is accepting to learn everyday, every hour. That’s how is our job and if you don’t agree with that, change your job and choose something that will passionate you.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-future-come-from-individual-and-collective-iniatives&quot;&gt;The future come from individual and collective iniatives&lt;/h2&gt;
+
+&lt;p&gt;My speech seems to be harsh, but it’s really not. Fortunately people is starting to move, and that’s really great. Recently a new group came up: PHP Mauritius group. I myself started the “Front-End developers Mauritius” group on Facebook (222 persons till now), a monthly gathering via meetup.com, a Slack channel and we are thinking to soon launch some podcasts about developer’s experiences.
+I’m really enthusiatic to be part of that, but it’s not something only few person can handle. Changes can happen, and money is not what is needed in this case. We need motivated people with fresh ideas and the will to modernize the Mauritian Education system. I’m not only talking about Computer sciences, but everything that is teached today.
+I hope to see that happen soon… Before my next move.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jul 2016 21:11:20 +0400</pubDate>
+        <link>https://www.david-dias.com/notes/the-real-status-of-web-developers-skills-in-mauritius/</link>
+        <guid isPermaLink="true">https://www.david-dias.com/notes/the-real-status-of-web-developers-skills-in-mauritius/</guid>
+        
+        <category>mauritius</category>
+        
+        <category>front-end developement</category>
+        
+        <category>education</category>
+        
+        
+        <category>mauritius</category>
+        
+      </item>
+    
+  </channel>
+</rss>
