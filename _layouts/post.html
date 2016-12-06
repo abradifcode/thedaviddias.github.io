@@ -19,13 +19,13 @@ layout: default
               {% if page.date %}
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
               {% endif %}
-              <!--{% if page.dateModified %}
+              {% if page.dateModified %}
                 (Last updated: <time datetime="{{ page.dateModified | date_to_xmlschema }}" itemprop="dateModified">{{ page.updated | date: "%b %-d, %Y" }}</time>)
-              {% endif %}-->
+              {% endif %}
 
               <section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <picture class="author__image">
-                  <span style="background-image: url({% asset_path 'avatar/david-dias.jpg' %});">David Dias's Picture</span>
+
                 </picture>
                 <p class="author__name">Posted by <span itemprop="name">{{ page.author }}</span></p>
               </section>
