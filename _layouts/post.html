@@ -19,9 +19,9 @@ layout: default
               {% if page.date %}
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
               {% endif %}
-              {% if page.dateModified %}
+              <!--{% if page.dateModified %}
                 (Last updated: <time datetime="{{ page.dateModified | date_to_xmlschema }}" itemprop="dateModified">{{ page.updated | date: "%b %-d, %Y" }}</time>)
-              {% endif %}
+              {% endif %}-->
 
               <section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <picture class="author__image">
