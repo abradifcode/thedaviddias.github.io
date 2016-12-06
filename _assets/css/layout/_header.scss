@@ -39,20 +39,12 @@
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    @include breakpoint(desktop) {
-      padding: 1em 0;
-    }
   }
   &__list {
     list-style: none;
     margin: 0;
     display: block;
     padding: 0;
-    @include breakpoint(desktop) {
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      justify-content: flex-end;
-    }
     li {
       padding: 0 1em;
       font-weight: 700;
