@@ -1,0 +1,9 @@
+nav-primary:
+# - name: "Projects"
+#   url: /projects/
+- name: "Notes"
+  url: /notes/
+- name: "My story"
+  url: /david-dias-story/
+- name: "Contact me"
+  url: /contact-david-dias/

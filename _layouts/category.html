@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% assign category = page.title | downcase | slugify %}
+
+<header class="container post__header">
+  <h1 class="post__title">{{ page.title }}</h1>
+  <h2 class="post__excerpt">
+    {% if category.description %}
+      {{ category.description | markdownify | remove: "<p>" | remove: "</p>" }}
+    {% else %}
+      Category <em>{{ page.title }}</em>.
+    {% endif %}
+  </h2>
+
+</header>
+
+<div class="container post__content">
+
+  <div class="post__inner-wrapper">
+
+    <section class="post__body">
+      {% for post in page.posts %}
+        {% include post-entry.html %}
+      {% endfor %}
+    </section>
+
+  </div>
+
+</div>
+

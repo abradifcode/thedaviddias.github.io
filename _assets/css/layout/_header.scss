@@ -1,0 +1,90 @@
+
+.header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  border-top: 5px solid $color-text;
+  border-bottom: 1px solid #dbdbdb;
+  animation: a 3s;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.125);
+  &__title {
+    color: $color-text;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    color: $color-text;
+    text-transform: uppercase;
+    &:before {
+      content: "{";
+      padding: 0 .64em 0 .4096em;
+    }
+    &:after {
+      content: "}";
+      padding: 0 .4096em 0 .64em;
+    }
+  }
+  &__nav {
+    order: 2;
+    flex: 1 auto;
+  }
+  &__logo {
+    order: 1;
+    flex: 1 auto;
+  }
+  &__navbar {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    @include breakpoint(desktop) {
+      padding: 1em 0;
+    }
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    display: block;
+    padding: 0;
+    @include breakpoint(desktop) {
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      justify-content: flex-end;
+    }
+    li {
+      padding: 0 1em;
+      font-weight: 700;
+    }
+    &__link {
+      color: $color-text;
+      text-transform: uppercase;
+      font-size: .8em;
+      letter-spacing: .02em;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+
+
+.header__title,
+.header__subtitle {
+  display: inline-block;
+  font-size: .8em;
+  letter-spacing: .02em;
+}
+
+
+
+
+
+
+
+
+
+
+

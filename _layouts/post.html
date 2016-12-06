@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <meta itemprop="description" content="{{ page.excerpt | strip_html }}">
+
+  <header class="post__header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 center-lg">
+          <div class="post__wrapper">
+            <p class="post__category">
+              <a href="{{ base.url }}{{ page.category | slugify | prepend: '/category/' | append: '/' }}">{{ page.category | escape }}</a>
+            </p>
+            <h1 class="post__title" itemprop="name headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+            <div class="post__meta">
+              {% if page.date %}
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+              {% endif %}
+              {% if page.dateModified %}
+                (Last updated: <time datetime="{{ page.dateModified | date_to_xmlschema }}" itemprop="dateModified">{{ page.updated | date: "%b %-d, %Y" }}</time>)
+              {% endif %}
+
+              <section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <picture class="author__image">
+                  <span style="background-image: url({% asset_path 'avatar/david-dias.jpg' %});">David Dias's Picture</span>
+                </picture>
+                <p class="author__name">Posted by <span itemprop="name">{{ page.author }}</span></p>
+              </section>
+
+
+              {% if page.read_time %}
+                {% include post-read-time.html %}
+              {% endif %}
+              
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </header>
+
+  <section class="post__content" itemprop="articleBody">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+        {% include breadcrumb.html %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="post__footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+        {% if page.path contains '_posts' and page.tags %}
+          <div class="post__taxonomy">
+            {% include post-taxonomy.html %}
+          </div>
+        {% endif %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          {% include post-share.html %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          {% include post-pagination.html %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          {% if page.path contains '_posts' and site.related_posts.size >= 2 %}
+            {% include post-related.html %}
+          {% endif %}
+        </div>
+      </div>
+      {% if site.disqus.shortname %}
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">                 
+          {% include post-comments.html %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </footer>
+
+</article>

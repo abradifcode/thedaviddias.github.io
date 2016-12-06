@@ -1,0 +1,15 @@
+<!-- _includes/image.html -->
+<div class="post__image" >
+  {% if include.url %}
+  <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
+  {% endif %}
+    <figure>
+      {% img '{{ include.img }}' alt:'{{ include.alt }}' class:img-responsive %}
+      {% if include.caption %}
+        <figcaption class="post__image-caption">{{ include.caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% if include.url %}
+  </a>
+  {% endif %}
+</div>

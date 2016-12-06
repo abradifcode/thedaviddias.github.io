@@ -1,0 +1,30 @@
+<script type="text/javascript">
+  {% assign url = '{{image}}' %}
+  {% assign photo_link = '{{link}}' %}
+</script>
+
+{% js main %}
+
+{% if site.env == 'dev' %}
+<!--https://github.com/philipwalton/solved-by-flexbox/blob/master/templates/scripts.html-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
+  <script>
+    HTMLInspector.rules.extend('unused-classes', function(config) {
+      config.whitelist = config.whitelist.concat([
+        /^icon/,
+        /^wf-/,
+        /^hljs-/,
+        /^twitter-/
+      ]);
+      return config;
+    })
+    HTMLInspector.rules.extend('script-placement', function(config) {
+      config.whitelist = config.whitelist.concat([
+        '[async]',
+        '.js-allow-before-footer'
+      ]);
+      return config;
+    });
+    HTMLInspector.inspect({excludeElements: ['svg', 'iframe']});
+  </script>
+{% endif %}

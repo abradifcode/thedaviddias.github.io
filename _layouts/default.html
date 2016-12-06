@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include layout/head.html %}
+
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <meta itemprop="publisher" content="David Dias"/>
+    <meta itemprop="accessibilityControl" content="fullKeyboardControl"/>
+    <meta itemprop="accessibilityFeature" content="alternativeText">
+    <meta itemprop="accessibilityControl" content="fullMouseControl">
+    <meta itemprop="inLanguage" content="en"/>
+
+    <div class="skip">
+      <a href="#content">[Skip to Main Content]</a>
+    </div>
+    {% include browser-upgrade.html %}
+
+    {% include layout/header.html %}
+
+    <main id="content" class="main" aria-label="Main content" itemscope itemtype="http://schema.org/Blog">
+      {{ content }}
+    </main>
+
+    {% include layout/footer.html %}
+
+
+    {% include layout/scripts.html %}
+  </body>
+
+</html>

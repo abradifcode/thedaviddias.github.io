@@ -1,0 +1,30 @@
+---
+permalink: /notes/
+layout: page
+title: "Notes"
+---
+{% if site.data.sections.notes.show %}
+<!--notes-->
+<section class="page page__notes page--bg">
+  <header class="page__header">
+    <div class="container">
+      <h1 class="page__title">{{ site.data.sections.notes.heading }}</h1>
+    </div>
+  </header>
+  
+  <div class="page__body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          {% for post in site.posts limit:5 %}
+            {% include post-entry.html %}
+          {% endfor %}
+        </div>
+        <div class="col-lg-12 center-lg">
+          {% include pagination.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

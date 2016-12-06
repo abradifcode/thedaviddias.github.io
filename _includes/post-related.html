@@ -1,0 +1,22 @@
+
+
+<div class="relatedPosts">
+
+{% assign listed_posts_urls = page.url | split: ' ' %}
+{% for tag in page.tags %}
+  {% for mypost in site.tags[tag] %}
+    {% if listed_posts_urls contains mypost.url %}
+    {% else %}
+      <div>
+        <h5><a href="{{ mypost.url }}">{{ mypost.title }}</a></h5>
+      </div>
+      {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+</div>
+
+
+
+<!--itemprop="relatedLink"-->

@@ -1,0 +1,8 @@
+  <!-- Social: Facebook / Open Graph -->
+  <link href="https://www.facebook.com/{{ site.owner.social.facebook_username }}" rel="me">
+  <meta property="og:title" content="{{ page.title }}" /> 
+  <meta property="og:site_name" content="{{ site.title }}" /> 
+  <meta property="og:type" content="website" /> 
+  <meta property="og:url" content="{{ base.url }}" />
+  <meta property="og:image" content="{{ site.social.img | prepend: site.baseurl_root | prepend: site.url }}" />
+  <meta property="og:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}" /> 								
