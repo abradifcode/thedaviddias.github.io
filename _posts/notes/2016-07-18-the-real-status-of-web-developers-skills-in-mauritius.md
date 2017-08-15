@@ -1,6 +1,6 @@
 ---
 title:  "The real status of web developer’s skills in Mauritius"
-excerpt: ""
+excerpt: "When I arrived in Mauritius in October 2015, I was already working with lot of Mauritians since these 3 last years. I helped Front-Ends developers to push them forward, not be afraid to use new technologies to respond to technical challenges. And today I’m really proud of the team I’m managing. But after few months living here, my vision is uncompromising: futur developers need to change the way they work and learn else the market will fall down soon."
 date:   2016-07-18 21:11:20 +0400
 category: mauritius
 tags: [mauritius, front-end developement, education]

@@ -1,0 +1,44 @@
+
+.share {
+  margin: 1.5em;
+  &__heading {
+    text-align: center;
+    font-size: 0.7em;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+
+
+.share__item {
+  display: inline-block;
+  border: none;
+  padding: 0.5em;
+  width: 4em;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  outline: none;
+  > a {
+    color: #fff;
+    padding: 5px 15px;
+    transition: .5s;
+    text-align: center;
+
+  }
+}
+
+.share--twitter {
+  background-color: #00aced;
+}
+
+.share--facebook {
+  background-color: #3d5b99;
+}
+
+.share-linkedin {
+  background-color: #0073a4;
+}

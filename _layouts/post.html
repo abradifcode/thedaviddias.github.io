@@ -15,6 +15,7 @@ layout: default
               <a href="{{ base.url }}{{ page.category | slugify | prepend: '/category/' | append: '/' }}">{{ page.category | escape }}</a>
             </p>
             <h1 class="post__title" itemprop="name headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+
             <div class="post__meta">
               {% if page.date %}
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
@@ -25,11 +26,10 @@ layout: default
 
               <section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <picture class="author__image">
-
+                  {% img 'avatar/david-dias.jpg' %}
                 </picture>
                 <p class="author__name">Posted by <span itemprop="name">{{ page.author }}</span></p>
               </section>
-
 
               {% if page.read_time %}
                 {% include post-read-time.html %}

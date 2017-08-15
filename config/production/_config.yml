@@ -1,0 +1,18 @@
+# ==================
+# Environment
+# ==================
+environment: production
+
+# ==================
+# Base
+# ==================
+url: "http://david-dias.com"
+
+# ==================
+# Assets
+# ==================
+assets:
+  compress:
+    css: true
+    js: true
+  digest: true

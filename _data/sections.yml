@@ -14,10 +14,6 @@ notes:
   heading: "Notes and experiments"
   read_more: "All notes and experiments"
 
-instagram:
-  show: true
-  heading: "My developer's life'"
-
 footer:
-  extra: "Living now in Mauritius. (before France, Brazil)"
+  extra: "Living now in Mauritius. (before France, Brazil - next Canada)"
   view_source: "View source"

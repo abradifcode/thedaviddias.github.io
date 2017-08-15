@@ -49,16 +49,7 @@
     background-color: #f7f7f5;
     padding: 3em;
     margin-bottom: 2em;
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      margin-left: -35px;
-      width: 70px;
-      height: 1px;
-      background: #DDD;
-    }
+
   }
   &__category {
     color: $color-primary;

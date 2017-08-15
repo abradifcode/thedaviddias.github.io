@@ -1,0 +1,185 @@
+# ==================
+# Environment
+# ==================
+environment: development
+
+source: .
+destination: ./_site
+
+# ==================
+# Base
+# ==================
+title: "David Dias"
+subtitle: "code - learn - live"
+description: "David Dias is a Front-End UX / UI Developer. Coding around the world, learning every day, living all time."
+locale: "en_US"
+noindex: false
+
+url: "http://thedaviddias.me"
+
+# ==================
+# Author
+# ==================
+owner:
+  author:
+    name: "David Dias"
+    firstName: "David"
+    lastName: "Dias"
+    bio: ""
+    avatar: "/avatar/david-dias.jpg"
+    email: "thedaviddias@gmail.com"
+    email_secure: ""
+
+  social:
+
+    twitter_username: "thedaviddias"
+    facebook_username: "thedaviddias"
+    instagram_username: "thedaviddias"
+    github_username: "thedaviddias"
+    dribbble_username: "thedaviddias"
+    codepen_username: "thedaviddias"
+    500px_username: "thedaviddias"
+    foursquare_username: "thedaviddias"
+
+    github_repo: "https://github.com/thedaviddias/thedaviddias.github.io/"
+    github_master: "https://github.com/thedaviddias/thedaviddias.github.io/blob/master/"
+
+  google:
+    provider: "google-universal"
+    analytics: "UA-45667748-1"
+    plus: "https://plus.google.com/+DavidDiasFront/posts"
+    verify: ""
+  bing:
+    verify: "84B7F071DD4BC580F678B80A9D62EED1"
+
+  comments:
+    provider: "disqus"
+    disqus:
+      shortname: "thedaviddias"
+
+# ==================
+# Building
+# ==================
+
+exclude: [
+  ".asset-cache",
+  ".bundle",
+  ".jekyll-assets-cache",
+  ".sass-cache",
+  "Gemfile",
+  "Gemfile.lock",
+  "node_modules",
+  "gulpfile.js",
+  "package.json",
+  "Rakefile",
+  "readme.md",
+  "Capfile",
+  "config",
+  "LICENSE",
+  "log",
+  "tmp",
+  "_assets/img/icons"
+]
+
+gems:
+  - jekyll-assets
+  - rouge
+  - jekyll-archives
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-tagging-related_posts
+  - jekyll/tagging
+
+future: false
+show_drafts: false
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  toc_levels: 1..3
+  hard_wrap: false
+  auto_ids: true
+  entity_output: as_char
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter: rouge
+  css_class: highlight
+
+highlighter:
+  options: ['startinline']
+
+keep_files:
+  - .git
+
+include:
+  - _pages
+
+# Collections
+collections:
+  projects:
+    output: true
+
+# Front Matter Defaults
+defaults:
+  # _posts
+  - scope:
+      path: _posts/notes
+      type: posts
+    values:
+      permalink: /notes/:title/
+      layout: post
+      category: thought
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      author: David Dias
+      breadcrumbs:
+        - label: "Notes"
+          url: /notes/
+
+  # Pages
+  - scope:
+      path: _pages
+      type: pages
+    values:
+      layout: page
+
+# Jekyll archive configuration
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layouts:
+    tag: tag
+    category: category
+  permalinks:
+    category: '/category/:name/'
+    tag: /tag/:name/
+
+jekyll-mentions:
+  base_url: https://twitter.com
+
+# ==================
+# Assets
+# ==================
+sass:
+  sass_dir: _assets/scss
+
+assets:
+  compress:
+    css: false
+    js: false
+  cache: false
+  digest: false
+    - _assets/css
+    - _assets/js
+    - _assets/img
+    - uploads
+  features:
+    automatic_img_size: false
+
+
+
+

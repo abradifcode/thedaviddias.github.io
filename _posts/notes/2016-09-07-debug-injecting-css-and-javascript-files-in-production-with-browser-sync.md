@@ -3,7 +3,7 @@ title:  "Debug injecting your CSS and JavaScript files in production with Browse
 date:   2016-09-07 21:11:20 +0400
 updated:   2016-09-07 21:11:20 +0400
 category: front-end
-tags: [front-end, web developement, browsersync]
+tags: [css, front-end, web developement, browsersync]
 excerpt_separator: <!--more-->
 ---
 

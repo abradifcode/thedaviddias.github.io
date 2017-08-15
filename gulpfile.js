@@ -1,53 +1,36 @@
 const child = require('child_process');
 const browserSync = require('browser-sync');
-const reload = browserSync.reload;
 
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
+const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps');
 const svgSprite = require("gulp-svg-sprites");
+const shell = require('gulp-shell');
 
 const siteRoot = '_site';
-const cssFiles = '_/assets/css/**/*.?(s)css';
+const cssFiles = './_assets/scss/**/*.?(s)css';
 
-
-/**
- * Build the Jekyll Site
- */
-// gulp.task('jekyll-build', function (done) {
-//     return child.spawn('jekyll', ['build'], {stdio: 'inherit'})
-//         .on('close', done);
-// });
-
-gulp.task('css', () => {
-  gulp.src('_/assets/css/main.scss')
+gulp.task('styles', () => {
+  gulp.src(['./_assets/scss/main.scss', './_assets/scss/critical.scss', './_assets/scss/amp.scss'])
     .pipe(plumber((error) => {
       console.log(error);
       this.emit('end');
     }))
     .pipe(sass())
-    .pipe(gulp.dest(siteRoot + '/css'))
-    .pipe(reload({ stream: true }));
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions'],
+      cascade: false
+    }))    
+    .pipe(gulp.dest('./_assets/css'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
-gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['serve',
-    '--watch',
-    '--incremental',
-    '--drafts'
-  ]);
-
-  const jekyllLogger = (buffer) => {
-    buffer.toString()
-      .split(/\n/)
-      .forEach((message) => gutil.log('Jekyll: ' + message));
-  };
-
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
-});
+gulp.task('jekyll-build', shell.task(['jekyll build --watch --drafts --incremental --config config/shared/_config.yml']))
 
 gulp.task('sprites', function () {
   return gulp.src('_assets/img/icons/*.svg')
@@ -61,39 +44,49 @@ gulp.task('sprites', function () {
     .pipe(gulp.dest("_assets"));
 });
 
-gulp.task('serve', () => {
+gulp.task('jekyll-serve', () => {
+
   browserSync.init({
-    files: [siteRoot + '/**'],
+    files: [siteRoot + '/**'],    
     port: 4000,
     open: false,
     server: {
       baseDir: siteRoot
     },
-    logFileChanges: true,
-    logConnections: false,
     injectChanges: true,
-    timestamps: false,
-    ghostMode: {
-      clicks: true,
-      forms: true,
-      scroll: false
-    }
-  });
+    timestamps: false
+  })
+  // WATCH
+    // gulp.watch('_site/**/*.*').on('change', browserSync.reload)
+    // gulp.watch('_assets/css/main.css').on('change', browserSync.reload)    
+    // gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '**/*.html', 'js/**/*', 'images/*']);
+
+
 });
 
-gulp.task('html', ['jekyll'], () => {
-  gulp.src([path.join(deploy, '*.html'),path.join(deploy, '*/*/*/*.html')]/*'*.html'*/)
-    .pipe(htmlmin({collapseWhitespace: true}))
+gulp.task('watch', function () {
+    gulp.watch(cssFiles, ['styles'])
+});
+
+gulp.task('minify', ['jekyll-build'], () => {
+  return gulp.src([path.join(deploy, '*.html'),path.join(deploy, '*/*/*/*.html')]/*'*.html'*/)
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      minifyJS: true      
+    }))
     .pipe(gulp.dest(deploy))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 
+gulp.task('build-site',
+  ['styles'],
+  shell.task('JEKYLL_ENV=production jekyll build --config config/shared/_config.yml,config/production/_config.yml')
+)
 
-// WATCH
-gulp.task('watch', function () {
-    gulp.watch(cssFiles, ['css']);
-    // gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '**/*.html', 'js/**/*', 'images/*']);
-});
+gulp.task('default', [
+  'styles', 'jekyll-build', 'jekyll-serve', 'watch'
+]);
 
-
-gulp.task('default', ['css', 'jekyll', 'serve', 'watch']);
+gulp.task('build-production', [
+    'styles', 'build-site', 'minify'
+]);

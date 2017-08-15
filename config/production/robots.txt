@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: http://david-dias.com/sitemap.xml
